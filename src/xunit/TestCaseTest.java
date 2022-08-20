@@ -4,6 +4,17 @@ public class TestCaseTest extends TestCase{
     public TestCaseTest(String name) {
         super(name);
     }
+
+    public static TestSuite suite() {
+        TestSuite testSuite = new TestSuite();
+        testSuite.add(new TestCaseTest("testTemplateMethod"));
+        testSuite.add(new TestCaseTest("testResult"));
+        testSuite.add(new TestCaseTest("testFailedResultFormatting"));
+        testSuite.add(new TestCaseTest("testFailedResult"));
+        testSuite.add(new TestCaseTest("testSuite"));
+        return testSuite;
+    }
+
     public void testTemplateMethod() {
         WasRun wasRun = new WasRun("testMethod");
         TestResult result = new TestResult();
