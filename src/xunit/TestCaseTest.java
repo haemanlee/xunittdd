@@ -6,13 +6,14 @@ public class TestCaseTest extends TestCase{
     }
 
     public static TestSuite suite() {
-        TestSuite testSuite = new TestSuite();
-        testSuite.add(new TestCaseTest("testTemplateMethod"));
-        testSuite.add(new TestCaseTest("testResult"));
-        testSuite.add(new TestCaseTest("testFailedResultFormatting"));
-        testSuite.add(new TestCaseTest("testFailedResult"));
-        testSuite.add(new TestCaseTest("testSuite"));
-        return testSuite;
+        return new TestSuite(TestCaseTest.class);
+//        TestSuite testSuite = new TestSuite();
+//        testSuite.add(new TestCaseTest("testTemplateMethod"));
+//        testSuite.add(new TestCaseTest("testResult"));
+//        testSuite.add(new TestCaseTest("testFailedResultFormatting"));
+//        testSuite.add(new TestCaseTest("testFailedResult"));
+//        testSuite.add(new TestCaseTest("testSuite"));
+//        return testSuite;
     }
 
     public void testTemplateMethod() {
